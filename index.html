@@ -7,17 +7,27 @@
     <title>Calculadora de Clamp</title>
 </head>
 <body style="background-color:black">
+    <h1 style="color: azure">CALCULADORA CLAMP</h1>
 </body>
 <script>
     function calculadoraClamp() {
     var x = parseFloat(prompt("Ingresa el valor de los pixeles que quieres pasar a clamp:"));
     var y = parseFloat(prompt("Ingresa el valor de la resolucion de la pantalla:"));
-    var min = x - (x/4);
+    var preMin = x - (x/4);
+    var min = preMin - (preMin/3);
     var max = x + (x/4);
     var i = x / y * 100;
     var vw = i.toFixed(7)
     alert(`clamp(${min}px, ${vw}vw, ${max}px);`);
     }
+    calculadoraClamp();
+    calculadoraClamp();
+    calculadoraClamp();
+    calculadoraClamp();
+    calculadoraClamp();
+    calculadoraClamp();
+    calculadoraClamp();
+    calculadoraClamp();
     calculadoraClamp();
     </script>
 </html>
